@@ -13,7 +13,30 @@
             arreglo2.push(arreglo1[i])
         }
     }
-    console.log("Valores Ordenados: " + arreglo2);
+
+
+    function intercambio(numeros, indice1, indice2){
+        let numTemp = numeros[indice1];
+        numeros[indice1] = numeros[indice2];
+        numeros[indice2] = numTemp;
+        return numeros;
+    }
+
+    function ordenamiento(numeros){
+        let size = numeros.length;
+
+        for( let i = 1; i < size; i++ ){ // outer loop
+            for( let left = 0; left < (size - i); left++){ // inner loop
+                let right = left + 1;
+                if( numeros[left] > numeros[right] ){
+                    intercambio(numeros, left, right);
+                }
+            }
+        }
+
+        return numeros;
+    }
+    console.log("Valores Ordenados: " + ordenamiento(arreglo2));
 </script>
 </body>
 </html>
