@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arreglo1 = ["unacadena",3,9,1,10,500,1,10,true];
+    let arreglo2=[];
+    for (let i=0; i < arreglo1.length; i++){
+        if (typeof arreglo1[i] === "number"){
+            arreglo2.push(arreglo1[i])
+        }
+    }
+    console.log("Valores Ordenados: " + arreglo2);
+</script>
+</body>
+</html>
