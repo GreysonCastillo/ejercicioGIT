@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//Punto 1
+/*    var numero1 = 5;
+    var numero2 = 8;
+        if(numero1 < numero2) {
+            console.log("numero1 no es mayor que numero2");
+        }
+        if(numero2 > 0) {
+            console.log("numero2 es positivo");
+        }
+        if(numero1 != 0) {
+            console.log("numero1 es negativo o distinto de cero");
+        }
+        if(numero1+1 <= numero2) {
+            console.log("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+        }
+*/
+
+
+//Punto 2
+/*    numero=5;
+    let multiplicacion=1;
+    for (let i=1; i<=numero; i++){
+        multiplicacion*=i;
+    }
+    console.log("El factorial de "+numero+" = "+multiplicacion)
+*/
+
+
+//Punto 3
+
+/*function validarNumero(numero){
+    let valor1 = numero;
+    let resultado;
+    if (valor1 % 2 == 0 ){
+        resultado = console.log("El valor ingresado es par");
+    }else
+        resultado = console.log("El valor ingresado es impar");
+    return resultado;
+}
+let numero=3;
+console.log(validarNumero(numero));
+ */
+
+
+//Punto 4
+/*function palindromo(texto){
+    let frase = texto;
+    for(let i=0; i<frase.length; i++){
+        if(frase[i] != frase[frase.length - i-1]){
+            return false;
+        }
+    }
+    return true;
+}
+let texto = "“la ruta nos aporto otro paso natural";
+if(palindromo(texto) == true){
+    console.log("La frase es palindromo");
+}else
+    console.log("La frase no es palindromo");
+ */
+
+
+//Punto 5
+
+class Persona {
+    nombre;
+    edad;
+
+    obtDetalles(nombre, edad) {
+        console.log(nombre + edad);
+    }
+
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad
+    }
+
+}
+
+class Estudiante extends Persona{
+    calificacion;
+
+    constructor(nombre, edad) {
+        super(nombre, edad);
+        this.calificacion = 5;
+    }
+
+    obtDetalles(nombre, edad, calificacion) {
+        console.log(nombre + edad + calificacion);
+    }
+}
+
+class Profesor extends Persona{
+    asignatura;
+    nivel;
+
+    constructor(nombre, edad) {
+        super(nombre, edad);
+        this.asignatura="js";
+        this.nivel="basico";
+    }
+
+    obtDetalles(nombre, edad, asignatura, nivel) {
+        console.log(nombre + edad + asignatura + nivel);
+    }
+}
+
+class Grupo extends Profesor{
+
+}
+</script>
+</body>
+</html>
